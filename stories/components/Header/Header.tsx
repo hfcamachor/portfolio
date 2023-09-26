@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -26,19 +28,23 @@ const theme = createTheme({
   },
 });
 
+type NavItems = {
+  label: string;
+  onClick?: () => void;
+};
+
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
   window?: () => Window;
+  navItems: NavItems[];
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
 
-export function Header(props: Props) {
-  const { window } = props;
+export function Header({ window, navItems }: Props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -52,10 +58,10 @@ export function Header(props: Props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }} onClick={item.onClick}>
+              <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -67,8 +73,8 @@ export function Header(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box>
+    <header>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <AppBar component="nav" position="relative">
           <Toolbar>
@@ -85,8 +91,12 @@ export function Header(props: Props) {
               <ComputerIcon />
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <AnimatedButton></AnimatedButton>
+              {navItems.map((item, index) => (
+                <AnimatedButton
+                  label={item.label}
+                  onClick={item.onClick}
+                  key={index}
+                ></AnimatedButton>
               ))}
             </Box>
           </Toolbar>
@@ -111,7 +121,7 @@ export function Header(props: Props) {
             {drawer}
           </Drawer>
         </nav>
-      </Box>
-    </ThemeProvider>
+      </ThemeProvider>
+    </header>
   );
 }

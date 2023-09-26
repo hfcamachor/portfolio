@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import styles from "./animated-button.module.scss";
 import clsx from "clsx";

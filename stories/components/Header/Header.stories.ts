@@ -17,10 +17,22 @@ type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
   args: {
-    user: {
-      name: 'Jane Doe',
-    },
+    navItems: [
+      {
+        label: "Home",
+        onClick: () => {console.log("My home")}
+      },
+      {
+        label: "About",
+        onClick: () => {console.log("About")}
+      },
+      {
+        label: "Experience",
+      },
+      {
+        label: "Work",
+        onClick: () => {console.log("My Work")}
+      },
+    ]
   },
 };
-
-export const LoggedOut: Story = {};
