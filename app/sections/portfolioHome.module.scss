@@ -1,7 +1,12 @@
+@import "../../public/styles/colors.scss";
+@import "../../public/styles/mixins.scss";
+
 .portfolioHome {
-  background-color: rgb(201, 25, 25);
+  background-color: $portfolio-cyan;
   width: 100%;
   height: calc(100vh - 60px);
+  min-height: 700px;
+  overflow: hidden;
   position: relative;
 
   .backShape {
@@ -9,48 +14,19 @@
     height: 100%;
     margin-left: auto;
     opacity: 1;
-    background-color: #212121;
+    background-color: $portfolio-black;
     position: absolute;
     top: 0;
   }
-  
+
   .backShapeBlack {
-    clip-path: polygon(-1% 0, 62% 0, 15% 158%, 0 110%);
+    clip-path: polygon(-1% 0, 34% 0, 67% 158%, 0 110%);
     background-image: url("../../public/cubes.png");
   }
 
   .backShapeWhite {
     background-color: white;
-    clip-path: polygon(-1% 0, 69% 0, 15% 158%, 0 110%);
-  }
-
-  .homeTexts {
-    color: white;
-    font-size: 48px;
-    margin-left: 10%;
-    perspective: 500px;
-
-    .homeTextOne, .homeTextTwo {
-      display: block;
-    }
-
-    .homeTextTwo {
-      margin-top: 10px;
-      font-weight: bold;
-      font-size: 4vw;
-    }
-  }
-
-  .homeTextsContainer {
-    transform: rotateY(40deg);
-  }
-
-  .photo {
-    position: absolute;
-    width: 40%;
-    right: 0;
-    bottom: 0;
-    line-height: 0;
+    clip-path: polygon(-1% 0, 35% 0, 77% 158%, 0 110%);
   }
 
   .homeContainer {
@@ -60,5 +36,69 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .photoSection {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+  }
+
+  .photo {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    line-height: 0;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include desktop {
+      width: 70%;
+    }
+  }
+
+  .homeShapeText {
+    background-color: #ffffff;
+    width: 100%;
+    height: 200px;
+    top: 70%;
+    clip-path: polygon(0 0, 94% 25%, 100% 75%, 0 100%);
+    position: absolute;
+  }
+
+  .homeTexts {
+    font-size: 48px;
+    margin-left: 10%;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+
+    .titleNameContainer {
+      margin-left: -40px;
+      margin-bottom: 20px;
+    }
+
+    .titleName {
+      font-weight: bold;
+      font-size:  2vw;
+    }
+
+    .title {
+      font-size: 3.5vw;
+      font-weight: bold;
+      padding: 10px;
+
+      @include tablet {
+        font-size: 3.6vw;
+      }
+
+      @include desktop {
+        font-size: 4vw;
+      }
+    }
   }
 }

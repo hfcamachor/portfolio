@@ -1,0 +1,47 @@
+@import "../../../public/styles/colors.scss";
+
+.textWithShape {
+  position: relative;
+  padding: 5px 20px;
+  text-align: center;
+  display: inline-block;
+
+  .shape {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    transform: skewY(0deg) skewX(25deg);
+  }
+
+  .shapeReverted {
+    transform: skewY(0deg) skewX(-25deg);
+  }
+
+  &.black {
+    color: white;
+    .shape {
+      background-color: $portfolio-black;
+    }
+  }
+
+  &.red {
+    color: white;
+    .shape {
+      background-color: $portfolio-red;
+    }
+  }
+
+  &.white {
+    .shape {
+      background-color: $portfolio-white;
+    }
+  }
+
+  &.cyan {
+    .shape {
+      background-color: $portfolio-cyan;
+    }
+  }
+}
