@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { CodeMenuButton } from './CodeMenuButton';
+import { HeaderButton } from './HeaderButton';
 
 const meta = {
-  title: 'Components/CodeMenuButton',
-  component: CodeMenuButton,
+  title: 'Components/HeaderButton',
+  component: HeaderButton,
   tags: ['autodocs'],
   argTypes: {
     label: {
@@ -13,7 +13,7 @@ const meta = {
       control: 'boolean',
     },
   },
-} satisfies Meta<typeof CodeMenuButton>;
+} satisfies Meta<typeof HeaderButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

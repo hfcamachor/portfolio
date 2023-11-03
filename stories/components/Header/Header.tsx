@@ -1,23 +1,27 @@
 "use client";
 
 import * as React from "react";
-import "./toolbar-override.scss";
+import { HeaderButton, HeaderButtonProps } from "../HeaderButton/HeaderButton";
+import styles from './header.module.scss';
+import clsx from "clsx";
 
-type NavItems = {
-  label: string;
-  onClick?: () => void;
-};
-
-interface Props {
-  navItems: NavItems[];
+interface HeaderProps {
+  navItems: HeaderButtonProps[];
+  className?: string
 }
 
 
-export function Header() {
+export function Header({navItems, className}: HeaderProps) {
 
   return (
-    <header>
-      Header
+    <header className={clsx(styles.header, className)}>
+      <div className={styles.headerButtons}>
+        {navItems.map((item, index) => {
+          return (
+            <HeaderButton key={index} label={item.label} onClick={item.onClick} active={item.active} labelColor="white"  />
+          )
+        })}
+      </div>
     </header>
   );
 }

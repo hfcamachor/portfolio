@@ -1,0 +1,42 @@
+@import "../../../styles/colors.scss";
+
+.animatedCircleContainer {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.animatedCircle {
+  width: 100%;
+}
+
+.motionSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  stroke: $fourth-text-color;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+.animatedCircleImageContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animatedCircleImage {
+  background-color: lemonchiffon;
+  width: 73%;
+  height: 73%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}

@@ -1,5 +1,6 @@
 "use client"
 import { Header } from "@/stories/components/Header/Header";
+import styles from "./headerApp.module.scss";
 
 export const metadata = {
     title: "Create Next App",
@@ -12,6 +13,7 @@ export const metadata = {
       onClick: () => {
         console.log("My home");
       },
+      active: true,
     },
     {
       label: "About",
@@ -31,5 +33,5 @@ export const metadata = {
   ];
 
 export const HeaderApp = () => {
-    return <Header></Header>
+    return <Header navItems={navItems} className={styles.headerApp}></Header>
 }

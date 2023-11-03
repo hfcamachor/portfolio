@@ -1,11 +1,9 @@
 @import "../../../styles/colors.scss";
 
 .header {
-  background-color: rgba(0, 0, 0, 0.675);
+  background-color: $background-primary;
   color: white;
-  height: 55px;
-  padding: 0 20px;
-  box-sizing: border-box;
+  height: 50px;
 }
 
 .headerButtons {
