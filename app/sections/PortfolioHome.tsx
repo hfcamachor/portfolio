@@ -1,9 +1,12 @@
 import style from "./portfolioHome.module.scss";
+import { PhotoShape } from "@/stories/components/PhotoShape/PhotoShape";
 
 export function PortfolioHome() {
   return (
     <section className={style.portfolioHome}>
-      Home
+      <div className={style.portfolioHomeSection}>
+        <PhotoShape />
+      </div>
     </section>
   );
 }
