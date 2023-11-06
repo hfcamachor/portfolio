@@ -17,6 +17,6 @@ type Story = StoryObj<typeof meta>;
 
 export const ButtonLabel: Story = {
   args: {
-    imageShape: "Submit"
+    imageShape: "/Submit"
   },
 };
