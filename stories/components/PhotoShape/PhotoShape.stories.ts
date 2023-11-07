@@ -6,7 +6,7 @@ const meta = {
   component: PhotoShape,
   tags: ['autodocs'],
   argTypes: {
-    imageShape: {
+    photoImage: {
       control: 'text',
     }
   },
@@ -15,8 +15,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ButtonLabel: Story = {
+export const PhotoShapeEx: Story = {
   args: {
-    imageShape: "/Submit"
+    photoImage: "https://raw.githubusercontent.com/hfcamachor/portfolio/2b81945795e284029ec50142214ce5ac60a7fa26/public/photos/photo.png",
+    alt: "Photo"
   },
 };

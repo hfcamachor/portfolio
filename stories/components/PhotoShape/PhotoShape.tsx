@@ -1,25 +1,32 @@
 import clsx from "clsx";
 import styles from "./photoShape.module.scss";
 import Image from "next/image";
+import { PhotoFrame } from "../PhotoFrame/PhotoFrame";
 
 export interface HeaderButtonProps {
   /**
-   * Url of the svg image
+   * Url of the photo image
    */
-  imageShape: string;
+  photoImage: string;
+  /**
+   * Alt of the image
+   */
+  alt: string;
 }
 
-export function PhotoShape({
-  imageShape = "black",
-}: HeaderButtonProps) {
+export function PhotoShape({ photoImage, alt }: HeaderButtonProps) {
   return (
-    <div>
-      <Image
-        fill
-        src={imageShape}
-        alt=""
-        objectFit="cover"
-      />
+    <div className={styles.photoShape}>
+      <PhotoFrame className={clsx(styles.shape)} color="pink" />
+      <div className={styles.photoShapeImageContainer}>
+        <Image
+          className={styles.photoShapeImage}
+          width={500}
+          height={500}
+          src={photoImage}
+          alt={alt}
+        />
+      </div>
     </div>
   );
 }

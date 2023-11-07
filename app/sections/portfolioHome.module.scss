@@ -3,8 +3,36 @@
 
 .portfolioHome {
   padding-top: 60px;
-  height: 100vh;
-  background-image: url("/backgrounds/backimage.jpeg");
+  height: calc(100vh - 60px);
+  background-color: $cyber-bunker;
   background-position: center;
   background-size: cover;
+  display: flex;
+}
+
+.portfolioHomeSection {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.portfolioHomeSectionTwo {
+  justify-content: flex-start;
+}
+
+.portfolioHomeTitle, style.portfolioHomeTitleName {
+  color: $cyber-bright-turquoise;
+  font-size: 36px;
+}
+
+.portfolioHomeTitleName {
+  display: block;
+  font-size: 48px;
+  padding-top: 10px;
+}
+
+.portfolioHomeTextBox {
+  max-width: 450px;
 }
