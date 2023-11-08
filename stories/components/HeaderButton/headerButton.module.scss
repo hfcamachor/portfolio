@@ -21,7 +21,6 @@
     }
     .headerButtonLabel {
       color: black;
-      font-weight: 700;
     }
 
     .headerButtonSmallShapeOne,
@@ -44,7 +43,7 @@
     }
 
     .headerButtonLabel {
-      font-weight: 700;
+      font-family: var(--font-orbitron-bold);
     }
 
     .headerButtonShape {
@@ -109,4 +108,5 @@
 .headerButtonLabel {
   display: inline-block;
   position: relative;
+  font-family: var(--font-orbitron);
 }

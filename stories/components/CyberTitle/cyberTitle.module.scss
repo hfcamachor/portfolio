@@ -1,0 +1,33 @@
+@import "../../../styles/colors.scss";
+
+.CyberTitleContainer {
+  background-color: $cyber-starship;
+  padding: 10px;
+  position: relative;
+  margin-left: 20px;
+  height: fit-content;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 13px;
+    left: -20px;
+    top: 0;
+    background-color: $cyber-starship;
+  }
+}
+
+.CyberTitleNameOne {
+  font-size: 24px;
+}
+
+.CyberTitleNameTwo {
+  font-size: 40px;
+  display: block;
+}
+
+.CyberTitle {
+  margin: 0;
+  font-family: var(--font-orbitron-bold);
+}

@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import styles from "./headerButton.module.scss";
-import FontComponent from "../FontComponent/FontComponent";
 
 export interface HeaderButtonProps {
   /**
@@ -42,9 +41,9 @@ export function HeaderButton({
       <div className={clsx(styles.headerButtonSmallShape, styles.headerButtonSmallShapeFour)}></div>
       <div className={styles.headerButtonShapeBack}></div>
       <div className={styles.headerButtonShape}></div>
-      <FontComponent className={styles.headerButtonLabel} fontName="orbitron">
+      <div className={styles.headerButtonLabel}>
         {label}
-      </FontComponent>
+      </div>
     </button>
   );
 }
