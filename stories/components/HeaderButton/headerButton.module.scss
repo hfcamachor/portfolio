@@ -19,10 +19,6 @@
     .headerButtonShapeBack {
       width: 100%;
     }
-    .headerButtonLabel {
-      color: black;
-    }
-
     .headerButtonSmallShapeOne,
     .headerButtonSmallShapeTwo,
     .headerButtonSmallShapeThree,
@@ -99,7 +95,7 @@
 }
 
 .headerButtonShapeBack {
-  background-color: $cyber-starship;
+  background-color: $cyber-valencia;
   border: none;
   width: 1%;
   transition: width 0.4s;
