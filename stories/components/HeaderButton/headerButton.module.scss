@@ -39,7 +39,7 @@
     .headerButtonSmallShapeFour {
       opacity: 1;
       height: 5px;
-      background-color: $cyber-starship;
+      background-color: $cyber-bright-turquoise;
     }
 
     .headerButtonLabel {
@@ -47,7 +47,7 @@
     }
 
     .headerButtonShape {
-        border-color: $cyber-starship;
+        border-color: $cyber-bright-turquoise;
     }
   }
 }
@@ -55,7 +55,7 @@
 .headerButtonShape,
 .headerButtonShapeBack,
 .headerButtonSmallShape {
-  border: solid 3px $cyber-viridian;
+  border: solid 3px $cyber-valencia;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -69,7 +69,7 @@
 .headerButtonSmallShapeTwo,
 .headerButtonSmallShapeThree,
 .headerButtonSmallShapeFour {
-  background-color: $cyber-viridian;
+  background-color: $cyber-valencia;
   width: 20%;
   transition: all 0.4s;
   border: none;
