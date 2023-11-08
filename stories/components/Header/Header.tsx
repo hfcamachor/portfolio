@@ -4,6 +4,7 @@ import * as React from "react";
 import { HeaderButton, HeaderButtonProps } from "../HeaderButton/HeaderButton";
 import styles from './header.module.scss';
 import clsx from "clsx";
+import { Separator } from "../Separator/Separator";
 
 interface HeaderProps {
   navItems: HeaderButtonProps[];
@@ -22,6 +23,7 @@ export function Header({navItems, className}: HeaderProps) {
           )
         })}
       </div>
+      <Separator />
     </header>
   );
 }
