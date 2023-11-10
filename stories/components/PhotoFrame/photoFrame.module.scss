@@ -1,9 +1,5 @@
 @import "../../../styles/colors.scss";
 
-.PhotoFrameblue {
-  stroke: $cyber-cornflower-blue;
-}
-
-.PhotoFramepink {
-  stroke: $cyber-hibiscus;
+.PhotoFrameblue path {
+  fill: $cyber-cornflower-blue;
 }
