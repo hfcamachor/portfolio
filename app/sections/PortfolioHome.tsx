@@ -22,7 +22,7 @@ export function PortfolioHome() {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              I am a front-end developer and web designer with 11 years of
+              I am a <span className={style.portfolioHomeHighlight}>front-end developer</span> with 11 years of
               experience creating websites and web applications.
             </motion.div>
           </div>
