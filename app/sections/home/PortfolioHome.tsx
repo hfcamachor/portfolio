@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 export function PortfolioHome() {
   return (
     <section className={style.portfolioHome}>
+      <div className={style.portfolioHomeBackground}></div>
       <div className={style.portfolioHomeSection}>
         <CyberFrame>
           <div>

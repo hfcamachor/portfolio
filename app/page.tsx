@@ -1,5 +1,6 @@
 import styles from "./page.module.scss";
-import { PortfolioHome } from "./sections/PortfolioHome";
+import { PortfolioHome } from "./sections/home/PortfolioHome";
+import { PortfolioAbout } from "./sections/about/PortfolioAbout";
 import "./page.module.scss"
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <div className={styles.main}>
         <PortfolioHome />
+        <PortfolioAbout />
       </div>
     </main>
   );

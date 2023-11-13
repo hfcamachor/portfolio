@@ -1,0 +1,22 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/breakpoints.scss";
+
+.portfolioAbout {
+  height: calc(100vh - 60px);
+  background-color: $cyber-cod-gray;
+  position: relative;
+  display: flex;
+}
+
+.portfolioAboutSection {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.portfolioAboutPhoto {
+  max-width: 500px;
+  width: 100%;
+}
