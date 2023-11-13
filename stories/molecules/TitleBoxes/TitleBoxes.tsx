@@ -14,12 +14,16 @@ export interface TitleBoxesProps {
    */
   title: string;
   /**
+   * Set the component position to right
+   */
+  alignRight?: boolean;
+  /**
    * Color of the frame
    */
-  color?: "blue" | "pink";
+  color?: "red" | "yellow" | "blue";
 }
 
-export function TitleBoxes({ className, title }: TitleBoxesProps) {
+export function TitleBoxes({ className, title, alignRight, color }: TitleBoxesProps) {
   return (
     <motion.div
       className={clsx(styles.TitleBoxesContainer, className)}
@@ -30,7 +34,15 @@ export function TitleBoxes({ className, title }: TitleBoxesProps) {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <h1 className={styles.TitleBoxes}>{title}</h1>
+      <h1
+        className={clsx(
+          styles.TitleBoxes,
+          alignRight ? styles.TitleBoxesRight : styles.TitleBoxesLeft,
+          styles[`TitleBoxes${color}`]
+        )}
+      >
+        {title}
+      </h1>
     </motion.div>
   );
 }

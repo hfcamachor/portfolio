@@ -1,6 +1,100 @@
 @import "@styles/colors.scss";
 
 .TitleBoxes {
+  $color: $cyber-starship;
   font-family: var(--font-orbitron-bold);
-  background-color: $cyber-starship;
+  background-color: $color;
+  font-size: 24px;
+  padding: 10px 15px;
+  max-width: 500px;
+  box-sizing: border-box;
+  position: relative;
+
+  &::after {
+    width: 30px;
+    height: calc(100% - 30px);
+    content: "";
+    background-color: $cyber-starship;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+}
+
+.TitleBoxesLeft {
+  margin-right: 30px;
+
+  &::after {
+    right: -30px;
+  }
+
+  &::before {
+    right: -30px;
+    border-width: 30px 0 0 30px;
+    border-color: transparent transparent transparent $cyber-starship;
+  }
+}
+
+.TitleBoxesRight {
+  margin-left: 30px;
+  text-align: right;
+
+  &::after {
+    left: -30px;
+  }
+
+  &::before {
+    left: -30px;
+    border-width: 0 0 30px 30px;
+    border-color: transparent transparent $cyber-starship transparent;
+  }
+}
+
+.TitleBoxesred {
+  background-color: $cyber-valencia;
+  color: white;
+
+  &::after {
+    background-color: $cyber-valencia;
+  }
+
+  &.TitleBoxesLeft {
+    &::before {
+      border-color: transparent transparent transparent $cyber-valencia;
+    }
+  }
+
+  &.TitleBoxesRight {
+    &::before {
+      border-color: transparent transparent $cyber-valencia transparent;
+    }
+  }
+}
+
+.TitleBoxesblue {
+  background-color: $cyber-bright-turquoise;
+
+  &::after {
+    background-color: $cyber-bright-turquoise;
+  }
+
+  &.TitleBoxesLeft {
+    &::before {
+      border-color: transparent transparent transparent $cyber-bright-turquoise;
+    }
+  }
+
+  &.TitleBoxesRight {
+    &::before {
+      border-color: transparent transparent $cyber-bright-turquoise transparent;
+    }
+  }
 }

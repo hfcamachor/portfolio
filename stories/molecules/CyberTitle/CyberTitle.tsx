@@ -17,10 +17,6 @@ export interface CyberTitleProps {
    * title second part
    */
   titleTwo: string;
-  /**
-   * Color of the frame
-   */
-  color?: "blue" | "pink";
 }
 
 export function CyberTitle({ className, title, titleTwo }: CyberTitleProps) {
