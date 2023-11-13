@@ -1,8 +1,8 @@
 "use client";
 
 import style from "./portfolioHome.module.scss";
-import { CyberFrame } from "@/stories/components/CyberFrame/CyberFrame";
-import { CyberTitle } from "@/stories/components/CyberTitle/CyberTitle";
+import { CyberFrame } from "@/stories/atoms/CyberFrame/CyberFrame";
+import { CyberTitle } from "@/stories/molecules/CyberTitle/CyberTitle";
 import { motion } from "framer-motion";
 
 export function PortfolioHome() {

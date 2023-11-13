@@ -1,5 +1,5 @@
 "use client"
-import { Header } from "@/stories/components/Header/Header";
+import { Header } from "@/stories/organisms/Header/Header";
 import styles from "./headerApp.module.scss";
 
 export const metadata = {

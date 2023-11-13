@@ -1,0 +1,41 @@
+@import "@styles/colors.scss";
+
+.cyberFrame {
+  max-width: 700px;
+  position: relative;
+  width: 100%;
+}
+
+.cyberFramered {
+  .cyberFrameBorders {
+    fill: $cyber-valencia;
+  }
+
+  .cyberFrameMain {
+    stroke: $cyber-valencia;
+    fill: $cyber-coffee-bean;
+  }
+}
+
+.cyberFrameblue {
+  .cyberFrameBorders {
+    fill: $cyber-bright-turquoise;
+  }
+
+  .cyberFrameMain {
+    stroke: $cyber-bright-turquoise;
+    fill: $cyber-bunker;
+  }
+}
+
+.CyberFrameContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10% 5% 8% 10%;
+  display: flex;
+  align-items: center;
+  height: 70%;
+  width: 80%;
+  overflow: hidden;
+}

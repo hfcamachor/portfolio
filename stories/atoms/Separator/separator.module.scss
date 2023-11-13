@@ -1,0 +1,20 @@
+@import "@styles/colors.scss";
+
+.separator {
+  background-color: $cyber-valencia;
+  height: 5px;
+  position: relative;
+}
+
+.separatorSvg {
+  width: 100%;
+  max-width: 200px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  height: auto;
+
+  path {
+    fill: $cyber-valencia;
+  }
+}
