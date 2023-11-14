@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TitleBoxes } from './TitleBoxes';
+import { CyberTitle } from './CyberTitle';
 
 const meta = {
-  title: 'Molecules/TitleBoxes',
-  component: TitleBoxes,
+  title: 'Atoms/CyberTitle',
+  component: CyberTitle,
   tags: ['autodocs'],
   argTypes: {
     className: {
@@ -11,16 +11,19 @@ const meta = {
     },
     title: {
       control: 'text',
-    }
+    },
+    titleTwo: {
+      control: 'text',
+    },
   },
-} satisfies Meta<typeof TitleBoxes>;
+} satisfies Meta<typeof CyberTitle>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const TitleBoxesEx: Story = {
+export const CyberTitleEx: Story = {
   args: {
     title: "Hi, my name is",
-    color: "red"
+    titleTwo: "Homer Simpson",
   },
 };

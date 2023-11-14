@@ -2,7 +2,7 @@
 
 import style from "./portfolioHome.module.scss";
 import { CyberFrame } from "@/stories/atoms/CyberFrame/CyberFrame";
-import { CyberTitle } from "@/stories/molecules/CyberTitle/CyberTitle";
+import { CyberTitle } from "@/stories/atoms/CyberTitle/CyberTitle";
 import { motion } from "framer-motion";
 
 export function PortfolioHome() {

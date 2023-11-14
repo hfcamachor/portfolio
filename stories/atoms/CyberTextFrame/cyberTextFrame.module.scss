@@ -1,0 +1,39 @@
+@import "@styles/colors.scss";
+
+.CyberTextFrame {
+  max-width: 500px;
+  position: relative;
+  width: 100%;
+}
+
+.CyberTextFramered {
+  .CyberTextFrameBorders {
+    fill: $cyber-valencia;
+  }
+
+  .CyberTextFrameMain {
+    stroke: $cyber-valencia;
+    fill: $cyber-coffee-bean;
+  }
+}
+
+.CyberTextFrameblue {
+  .CyberTextFrameBorders {
+    fill: $cyber-bright-turquoise;
+  }
+
+  .CyberTextFrameMain {
+    stroke: $cyber-bright-turquoise;
+    fill: $cyber-bunker;
+  }
+}
+
+.CyberTextFrameContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 3% 3%;
+  height: 90%;
+  width: 92%;
+  overflow: hidden;
+}
