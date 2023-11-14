@@ -25,5 +25,6 @@ export const CyberTitleEx: Story = {
   args: {
     title: "Hi, my name is",
     titleTwo: "Homer Simpson",
+    color: "yellow"
   },
 };

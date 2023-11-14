@@ -4,22 +4,28 @@
   background-color: $cyber-starship;
   padding: 10px;
   position: relative;
-  margin-left: 20px;
+  margin-left: 30px;
   height: fit-content;
 
   &::after {
     content: "";
     position: absolute;
     height: 100%;
-    width: 13px;
-    left: -20px;
+    width: 15px;
+    left: -19px;
     top: 0;
     background-color: $cyber-starship;
   }
-}
 
-.CyberTitleNameOne {
-  font-size: 24px;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 7px;
+    left: -30px;
+    top: 0;
+    background-color: $cyber-starship;
+  }
 }
 
 .CyberTitleNameTwo {
@@ -29,5 +35,51 @@
 
 .CyberTitle {
   margin: 0;
-  font-family: var(--font-orbitron-bold);
+}
+
+.CyberTitleBig {
+  .CyberTitle {
+    font-family: var(--font-orbitron-bold);
+  }
+}
+
+.CyberTitlered {
+  color: white;
+  background-color: $cyber-valencia;
+
+  &::after,
+  &::before {
+    background-color: $cyber-valencia;
+  }
+}
+
+.CyberTitleSmall {
+  .CyberTitleNameOne {
+    font-size: 1rem;
+  }
+
+  .CyberTitle {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.CyberTitleRight {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 30px;
+
+  .CyberTitle {
+    justify-content: flex-end;
+  }
+
+  &::after {
+    left: auto;
+    right: -19px;
+  }
+
+  &::before {
+    left: auto;
+    right: -30px;
+  }
 }

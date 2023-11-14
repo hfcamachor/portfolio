@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { CyberInfoFrame } from './CyberInfoFrame';
 
 const meta = {
-  title: 'Atoms/CyberInfoFrame',
+  title: 'Molecules/CyberInfoFrame',
   component: CyberInfoFrame,
   tags: ['autodocs'],
   argTypes: {
@@ -17,6 +17,8 @@ type Story = StoryObj<typeof meta>;
 
 export const CyberInfoFrameEx: Story = {
   args: {
-    children: 'Example text'
+    title: 'Box title',
+    subtitle: 'Box subtitle',
+    buttonLabel: "Create another response"
   },
 };

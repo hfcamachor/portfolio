@@ -1,0 +1,35 @@
+@import "@styles/colors.scss";
+
+.CyberInfoFrame {
+  max-width: 500px;
+  position: relative;
+  width: 100%;
+}
+
+.CyberInfoButtonContainer {
+  position: absolute;
+  top: 95%;
+  left: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.CyberInfoButton {
+  width: 55%;
+}
+
+.CyberInfoFrameSubtitle {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.CyberInfoFrameContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 3% 4%;
+  height: 90%;
+  width: 90%;
+  overflow: hidden;
+}

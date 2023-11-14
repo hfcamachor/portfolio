@@ -3,7 +3,9 @@
 import clsx from "clsx";
 import styles from "./cyberInfoFrame.module.scss";
 import React from "react";
-import { TitleBoxShape } from "../TitleBoxShape/TitleBoxShape";
+import { TitleBoxShape } from "../../atoms/TitleBoxShape/TitleBoxShape";
+import { CyberTitle } from "../../atoms/CyberTitle/CyberTitle";
+import { CyberButton } from "../../atoms/CyberButton/CyberButton";
 
 export interface CyberInfoFrameProps {
   /**
@@ -11,28 +13,27 @@ export interface CyberInfoFrameProps {
    */
   className?: string;
   /**
-   * Color of the frame
+   * Title of the box
    */
-  color?: "blue" | "red";
+  title: string;
   /**
-   * Color of the frame
+   * Subtitle of the box
    */
-  children: React.ReactNode;
+  subtitle: string;
+  /**
+   * Text on the button
+   */
+  buttonLabel: string;
 }
 
 export function CyberInfoFrame({
   className,
-  color = "red",
-  children,
+  title,
+  subtitle,
+  buttonLabel,
 }: CyberInfoFrameProps) {
   return (
-    <div
-      className={clsx(
-        className,
-        styles.CyberInfoFrame,
-        styles[`CyberInfoFrame${color}`]
-      )}
-    >
+    <div className={clsx(className, styles.CyberInfoFrame)}>
       <svg
         width="100%"
         height="100%"
@@ -54,8 +55,18 @@ export function CyberInfoFrame({
       </svg>
 
       <div className={styles.CyberInfoFrameContent}>
-        <TitleBoxShape title="Example" />
-        {children}</div>
+        <TitleBoxShape title={title} />
+        <CyberTitle
+          title={subtitle}
+          right
+          small
+          className={styles.CyberInfoFrameSubtitle}
+          color="red"
+        />
+      </div>
+      <div className={styles.CyberInfoButtonContainer}>
+        <CyberButton label={buttonLabel} className={styles.CyberInfoButton} />
+      </div>
     </div>
   );
 }
