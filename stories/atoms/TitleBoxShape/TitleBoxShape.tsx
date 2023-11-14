@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./titleBoxes.module.scss";
+import styles from "./titleBoxShape.module.scss";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 

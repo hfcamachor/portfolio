@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import styles from "./cyberTextFrame.module.scss";
 import React from "react";
-import { TitleBoxes } from "../TitleBoxes/TitleBoxes";
+import { TitleBoxes } from "../TitleBoxShape/TitleBoxShape";
 
 export interface CyberTextFrameProps {
   /**

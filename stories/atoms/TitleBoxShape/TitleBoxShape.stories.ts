@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TitleBoxes } from './TitleBoxes';
+import { TitleBoxes } from './TitleBoxShape';
 
 const meta = {
   title: 'Atoms/TitleBoxes',
