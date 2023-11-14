@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { CyberTextFrame } from './CyberTextFrame';
+import { CyberInfoFrame } from './CyberInfoFrame';
 
 const meta = {
-  title: 'Atoms/CyberTextFrame',
-  component: CyberTextFrame,
+  title: 'Atoms/CyberInfoFrame',
+  component: CyberInfoFrame,
   tags: ['autodocs'],
   argTypes: {
     className: {
       control: 'text',
     },
   },
-} satisfies Meta<typeof CyberTextFrame>;
+} satisfies Meta<typeof CyberInfoFrame>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const CyberTextFrameEx: Story = {
+export const CyberInfoFrameEx: Story = {
   args: {
     children: 'Example text'
   },

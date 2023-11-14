@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TitleBoxes } from './TitleBoxShape';
+import { TitleBoxShape } from './TitleBoxShape';
 
 const meta = {
-  title: 'Atoms/TitleBoxes',
-  component: TitleBoxes,
+  title: 'Atoms/TitleBoxShape',
+  component: TitleBoxShape,
   tags: ['autodocs'],
   argTypes: {
     className: {
@@ -13,12 +13,12 @@ const meta = {
       control: 'text',
     }
   },
-} satisfies Meta<typeof TitleBoxes>;
+} satisfies Meta<typeof TitleBoxShape>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const TitleBoxesEx: Story = {
+export const TitleBoxShapeEx: Story = {
   args: {
     title: "Hi, my name is",
     color: "red"

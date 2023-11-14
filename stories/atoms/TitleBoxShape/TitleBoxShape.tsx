@@ -4,7 +4,7 @@ import styles from "./titleBoxShape.module.scss";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 
-export interface TitleBoxesProps {
+export interface TitleBoxShapeProps {
   /**
    * Custom Class
    */
@@ -23,10 +23,10 @@ export interface TitleBoxesProps {
   color?: "red" | "yellow" | "blue";
 }
 
-export function TitleBoxes({ className, title, alignRight, color }: TitleBoxesProps) {
+export function TitleBoxShape({ className, title, alignRight, color }: TitleBoxShapeProps) {
   return (
     <motion.div
-      className={clsx(styles.TitleBoxesContainer, className)}
+      className={clsx(styles.TitleBoxShapeContainer, className)}
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
@@ -36,9 +36,9 @@ export function TitleBoxes({ className, title, alignRight, color }: TitleBoxesPr
     >
       <h1
         className={clsx(
-          styles.TitleBoxes,
-          alignRight ? styles.TitleBoxesRight : styles.TitleBoxesLeft,
-          styles[`TitleBoxes${color}`]
+          styles.TitleBoxShape,
+          alignRight ? styles.TitleBoxShapeRight : styles.TitleBoxShapeLeft,
+          styles[`TitleBoxShape${color}`]
         )}
       >
         {title}

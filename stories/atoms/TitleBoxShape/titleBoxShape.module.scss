@@ -1,6 +1,6 @@
 @import "@styles/colors.scss";
 
-.TitleBoxes {
+.TitleBoxShape {
   $color: $cyber-starship;
   font-family: var(--font-orbitron-bold);
   background-color: $color;
@@ -30,7 +30,7 @@
   }
 }
 
-.TitleBoxesLeft {
+.TitleBoxShapeLeft {
   margin-right: 30px;
 
   &::after {
@@ -44,7 +44,7 @@
   }
 }
 
-.TitleBoxesRight {
+.TitleBoxShapeRight {
   margin-left: 30px;
   text-align: right;
 
@@ -59,7 +59,7 @@
   }
 }
 
-.TitleBoxesred {
+.TitleBoxShapered {
   background-color: $cyber-valencia;
   color: white;
 
@@ -67,33 +67,33 @@
     background-color: $cyber-valencia;
   }
 
-  &.TitleBoxesLeft {
+  &.TitleBoxShapeLeft {
     &::before {
       border-color: transparent transparent transparent $cyber-valencia;
     }
   }
 
-  &.TitleBoxesRight {
+  &.TitleBoxShapeRight {
     &::before {
       border-color: transparent transparent $cyber-valencia transparent;
     }
   }
 }
 
-.TitleBoxesblue {
+.TitleBoxShapeblue {
   background-color: $cyber-bright-turquoise;
 
   &::after {
     background-color: $cyber-bright-turquoise;
   }
 
-  &.TitleBoxesLeft {
+  &.TitleBoxShapeLeft {
     &::before {
       border-color: transparent transparent transparent $cyber-bright-turquoise;
     }
   }
 
-  &.TitleBoxesRight {
+  &.TitleBoxShapeRight {
     &::before {
       border-color: transparent transparent $cyber-bright-turquoise transparent;
     }

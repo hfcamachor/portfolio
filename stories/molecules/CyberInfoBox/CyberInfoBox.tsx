@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import styles from "./cyberTextBox.module.scss";
+import styles from "./cyberInfoBox.module.scss";
 import Image from "next/image";
 import { PhotoFrame } from "../../atoms/PhotoFrame/PhotoFrame";
 
@@ -14,13 +14,13 @@ export interface HeaderButtonProps {
   alt: string;
 }
 
-export function CyberTextBox({ photoImage, alt }: HeaderButtonProps) {
+export function CyberInfoBox({ photoImage, alt }: HeaderButtonProps) {
   return (
-    <div className={styles.CyberTextBox}>
+    <div className={styles.CyberInfoBox}>
       <PhotoFrame className={clsx(styles.shape)} color="red" />
-      <div className={styles.CyberTextBoxImageContainer}>
+      <div className={styles.CyberInfoBoxImageContainer}>
         <Image
-          className={styles.CyberTextBoxImage}
+          className={styles.CyberInfoBoxImage}
           width={500}
           height={500}
           src={photoImage}

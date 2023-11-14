@@ -1,34 +1,34 @@
 @import "@styles/colors.scss";
 
-.CyberTextFrame {
+.CyberInfoFrame {
   max-width: 500px;
   position: relative;
   width: 100%;
 }
 
-.CyberTextFramered {
-  .CyberTextFrameBorders {
+.CyberInfoFramered {
+  .CyberInfoFrameBorders {
     fill: $cyber-valencia;
   }
 
-  .CyberTextFrameMain {
+  .CyberInfoFrameMain {
     stroke: $cyber-valencia;
     fill: $cyber-coffee-bean;
   }
 }
 
-.CyberTextFrameblue {
-  .CyberTextFrameBorders {
+.CyberInfoFrameblue {
+  .CyberInfoFrameBorders {
     fill: $cyber-bright-turquoise;
   }
 
-  .CyberTextFrameMain {
+  .CyberInfoFrameMain {
     stroke: $cyber-bright-turquoise;
     fill: $cyber-bunker;
   }
 }
 
-.CyberTextFrameContent {
+.CyberInfoFrameContent {
   position: absolute;
   top: 0;
   left: 0;

@@ -1,11 +1,11 @@
 "use client";
 
 import clsx from "clsx";
-import styles from "./cyberTextFrame.module.scss";
+import styles from "./cyberInfoFrame.module.scss";
 import React from "react";
-import { TitleBoxes } from "../TitleBoxShape/TitleBoxShape";
+import { TitleBoxShape } from "../TitleBoxShape/TitleBoxShape";
 
-export interface CyberTextFrameProps {
+export interface CyberInfoFrameProps {
   /**
    * Custom Class
    */
@@ -20,17 +20,17 @@ export interface CyberTextFrameProps {
   children: React.ReactNode;
 }
 
-export function CyberTextFrame({
+export function CyberInfoFrame({
   className,
   color = "red",
   children,
-}: CyberTextFrameProps) {
+}: CyberInfoFrameProps) {
   return (
     <div
       className={clsx(
         className,
-        styles.CyberTextFrame,
-        styles[`CyberTextFrame${color}`]
+        styles.CyberInfoFrame,
+        styles[`CyberInfoFrame${color}`]
       )}
     >
       <svg
@@ -53,8 +53,8 @@ export function CyberTextFrame({
         />
       </svg>
 
-      <div className={styles.CyberTextFrameContent}>
-        <TitleBoxes title="Example" />
+      <div className={styles.CyberInfoFrameContent}>
+        <TitleBoxShape title="Example" />
         {children}</div>
     </div>
   );
