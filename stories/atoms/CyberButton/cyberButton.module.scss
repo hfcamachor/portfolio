@@ -1,29 +1,29 @@
 @import "@styles/colors.scss";
 
-$border-size: 6px;
+$border-size: 3px;
 
 .CyberButton {
   cursor: pointer;
   font-size: 0.9rem;
   outline: inherit;
   position: relative;
-  font-family: var(--font-orbitron-bold);
   padding: 0 30px;
   border: none;
   max-width: 500px;
   background-color: transparent;
+  color: white;
 }
 
 .CyberButtonContainer {
-  border-top: solid $border-size $cyber-valencia;
-  border-bottom: solid $border-size $cyber-valencia;
+  border-top: solid $border-size $cyber-bright-turquoise;
+  border-bottom: solid $border-size $cyber-bright-turquoise;
   padding: 10px 1px;
-  background-color: $cyber-starship;
+  background-color: $cyber-rangoon-green;
 }
 
 .CyberButtonSquareShape {
   width: 30px;
-  background-color: $cyber-valencia;
+  background-color: $cyber-bright-turquoise;
   height: calc(100% - 30px);
   position: absolute;
   left: 0;
@@ -31,7 +31,7 @@ $border-size: 6px;
 
   &Inner {
     width: 30px;
-    background-color: $cyber-starship;
+    background-color: $cyber-rangoon-green;
     height: calc(100% - $border-size);
     width: calc(100% - $border-size);
     position: absolute;
@@ -61,11 +61,11 @@ $border-size: 6px;
   height: 0;
   border-style: solid;
   border-width: 0 0 30px 30px;
-  border-color: transparent transparent $cyber-valencia transparent;
+  border-color: transparent transparent $cyber-bright-turquoise transparent;
 }
 
 .CyberButtonTriangleShapeInner {
-  border-color: transparent transparent $cyber-starship transparent;
+  border-color: transparent transparent $cyber-rangoon-green transparent;
   border-width: 0 0 calc(30px - $border-size) calc(30px - $border-size);
   right: 0;
   top: $border-size;
@@ -76,10 +76,10 @@ $border-size: 6px;
   left: auto;
   right: 0;
   border-width: 30px 0 0 30px;
-  border-color: transparent transparent transparent $cyber-valencia;
+  border-color: transparent transparent transparent $cyber-bright-turquoise;
 
   .CyberButtonTriangleShapeInner {
-    border-color: transparent transparent transparent $cyber-starship;
+    border-color: transparent transparent transparent $cyber-rangoon-green;
     border-width: calc(30px - $border-size) 0 0 calc(30px - $border-size);
     right: $border-size;
     top: calc($border-size - 30px);

@@ -45,7 +45,7 @@ export function CyberFrame({
           fill="#23100D"
           fill-opacity="0.6"
           stroke="#DC4943"
-          stroke-width="7"
+          stroke-width="2"
           className={styles.cyberFrameMain}
         />
         <motion.path

@@ -44,7 +44,7 @@ export function CyberInfoFrame({
         <path
           d="M3 544V3H440.5L474.5 33V198L453.5 213V389L474.5 405V544H382L352 512.5H137.5L100 544H3Z"
           stroke="#DC4943"
-          stroke-width="6"
+          stroke-width="4"
         />
         <path d="M465 222L489 204.5V398L465 380V222Z" fill="#DC4943" />
         <path
