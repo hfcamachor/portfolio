@@ -21,9 +21,15 @@ export interface TitleBoxShapeProps {
    * Color of the frame
    */
   color?: "red" | "yellow" | "blue";
+  /**
+   * Sets the tag og the title
+   */
+  level: number;
 }
 
-export function TitleBoxShape({ className, title, alignRight, color }: TitleBoxShapeProps) {
+export function TitleBoxShape({ className, title, alignRight, color, level }: TitleBoxShapeProps) {
+  const HeadingTag = `h${level}`;
+ 
   return (
     <motion.div
       className={clsx(styles.TitleBoxShapeContainer, className)}
@@ -34,7 +40,7 @@ export function TitleBoxShape({ className, title, alignRight, color }: TitleBoxS
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <h1
+      <HeadingTag
         className={clsx(
           styles.TitleBoxShape,
           alignRight ? styles.TitleBoxShapeRight : styles.TitleBoxShapeLeft,
@@ -42,7 +48,7 @@ export function TitleBoxShape({ className, title, alignRight, color }: TitleBoxS
         )}
       >
         {title}
-      </h1>
+      </HeadingTag>
     </motion.div>
   );
 }

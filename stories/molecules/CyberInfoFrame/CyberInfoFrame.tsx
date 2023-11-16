@@ -24,6 +24,14 @@ export interface CyberInfoFrameProps {
    * Text on the button
    */
   buttonLabel: string;
+  /**
+   * Title of the response
+   */
+  responseTitle: string;
+  /**
+   * Text of the response
+   */
+  responseText: string;
 }
 
 export function CyberInfoFrame({
@@ -31,6 +39,8 @@ export function CyberInfoFrame({
   title,
   subtitle,
   buttonLabel,
+  responseTitle,
+  responseText
 }: CyberInfoFrameProps) {
   return (
     <div className={clsx(className, styles.CyberInfoFrame)}>
@@ -55,14 +65,13 @@ export function CyberInfoFrame({
       </svg>
 
       <div className={styles.CyberInfoFrameContent}>
-        <TitleBoxShape title={title} />
-        <CyberTitle
-          title={subtitle}
-          right
-          small
-          className={styles.CyberInfoFrameSubtitle}
-          color="red"
-        />
+        <TitleBoxShape title={title} level={2} />
+        <div className={styles.CyberInfoFrameResponseContainer}>
+          <div className={styles.CyberInfoFrameResponse}>
+            <div className={styles.CyberInfoFrameResponseTitle}>{responseTitle}</div>
+            <div className={styles.CyberInfoFrameResponseText}>{responseText}</div>
+          </div>
+        </div>
       </div>
       <div className={styles.CyberInfoButtonContainer}>
         <CyberButton label={buttonLabel} className={styles.CyberInfoButton} />

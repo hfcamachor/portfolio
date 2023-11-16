@@ -29,6 +29,10 @@ export interface CyberTitleProps {
    * Color of the box (Yellow is default)
    */
   color?: "red" | "yellow";
+  /**
+   * Sets the tag og the title
+   */
+  level: number;
 }
 
 export function CyberTitle({
@@ -38,7 +42,10 @@ export function CyberTitle({
   small,
   right,
   color,
+  level
 }: CyberTitleProps) {
+  const HeadingTag = `h${level}`;
+
   return (
     <div
       className={clsx(
@@ -49,14 +56,14 @@ export function CyberTitle({
         className
       )}
     >
-      <h1 className={styles.CyberTitle}>
+      <HeadingTag className={styles.CyberTitle}>
         <span className={clsx(styles.CyberTitleName, styles.CyberTitleNameOne)}>
           {title}
         </span>
         {titleTwo && !small && (
           <span className={styles.CyberTitleNameTwo}>{titleTwo}</span>
         )}
-      </h1>
+      </HeadingTag>
     </div>
   );
 }

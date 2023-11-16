@@ -1,10 +1,12 @@
 @import "@styles/colors.scss";
 
 $border-size: 3px;
+$background-col: $cyber-rangoon-green;
+$border-col: $cyber-bright-turquoise;
 
 .CyberButton {
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   outline: inherit;
   position: relative;
   padding: 0 30px;
@@ -12,18 +14,19 @@ $border-size: 3px;
   max-width: 500px;
   background-color: transparent;
   color: white;
+  font-weight: bold;
 }
 
 .CyberButtonContainer {
-  border-top: solid $border-size $cyber-bright-turquoise;
-  border-bottom: solid $border-size $cyber-bright-turquoise;
+  border-top: solid $border-size $border-col;
+  border-bottom: solid $border-size $border-col;
   padding: 10px 1px;
-  background-color: $cyber-rangoon-green;
+  background-color: $background-col;
 }
 
 .CyberButtonSquareShape {
   width: 30px;
-  background-color: $cyber-bright-turquoise;
+  background-color: $border-col;
   height: calc(100% - 30px);
   position: absolute;
   left: 0;
@@ -31,7 +34,7 @@ $border-size: 3px;
 
   &Inner {
     width: 30px;
-    background-color: $cyber-rangoon-green;
+    background-color: $background-col;
     height: calc(100% - $border-size);
     width: calc(100% - $border-size);
     position: absolute;
@@ -61,11 +64,11 @@ $border-size: 3px;
   height: 0;
   border-style: solid;
   border-width: 0 0 30px 30px;
-  border-color: transparent transparent $cyber-bright-turquoise transparent;
+  border-color: transparent transparent $border-col transparent;
 }
 
 .CyberButtonTriangleShapeInner {
-  border-color: transparent transparent $cyber-rangoon-green transparent;
+  border-color: transparent transparent $background-col transparent;
   border-width: 0 0 calc(30px - $border-size) calc(30px - $border-size);
   right: 0;
   top: $border-size;
@@ -76,10 +79,10 @@ $border-size: 3px;
   left: auto;
   right: 0;
   border-width: 30px 0 0 30px;
-  border-color: transparent transparent transparent $cyber-bright-turquoise;
+  border-color: transparent transparent transparent $border-col;
 
   .CyberButtonTriangleShapeInner {
-    border-color: transparent transparent transparent $cyber-rangoon-green;
+    border-color: transparent transparent transparent $background-col;
     border-width: calc(30px - $border-size) 0 0 calc(30px - $border-size);
     right: $border-size;
     top: calc($border-size - 30px);

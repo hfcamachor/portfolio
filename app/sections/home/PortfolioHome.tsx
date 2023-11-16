@@ -20,7 +20,7 @@ export function PortfolioHome() {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              <CyberTitle title="Hi, my name is" titleTwo="Hector Camacho" />
+              <CyberTitle title="Hi, my name is" titleTwo="Hector Camacho" level={1} />
             </motion.div>
             <motion.div
               className={style.portfolioHomeText}

@@ -21,6 +21,7 @@ type Story = StoryObj<typeof meta>;
 export const TitleBoxShapeEx: Story = {
   args: {
     title: "Hi, my name is",
-    color: "red"
+    color: "red",
+    level: 1
   },
 };

@@ -35,7 +35,9 @@ export function PortfolioAbout() {
           <CyberInfoFrame
             title="About me"
             subtitle="Who is Hector"
-            buttonLabel="Create another response"
+            buttonLabel="Let AI Describe Me!"
+            responseTitle="Ai response"
+            responseText="Front-end developer and web designer with a passion for building accessible, intuitive, and visually appealing web experiences. Hybrid profile brings a unique blend of technical proficiency and creative vision to every project. Proven ability to develop and maintain high-quality web applications using a variety of technologies, including React, Vue, Angular, TypeScript, Storybook, Cypress, Next js, Vite, and Google Cloud Platform. Expertise in user interface (UI/UX) design, wireframing and prototyping with Figma, motion design, and interactive animation."
           />
         </div>
       </div>

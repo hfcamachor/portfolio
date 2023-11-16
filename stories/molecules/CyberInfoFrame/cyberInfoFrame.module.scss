@@ -34,3 +34,26 @@
   width: 90%;
   overflow: hidden;
 }
+
+.CyberInfoFrameResponseContainer {
+  margin-top: 10px;
+  height: 74%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.CyberInfoFrameResponse {
+  padding-left: 15px;
+}
+
+.CyberInfoFrameResponseTitle {
+  font-size: 0.8rem;
+  font-family: var(--font-orbitron-bold);
+}
+
+.CyberInfoFrameResponseText {
+    font-size: 1rem;
+    padding: 0 30px 0 20px;
+    margin-top: 10px;
+}
