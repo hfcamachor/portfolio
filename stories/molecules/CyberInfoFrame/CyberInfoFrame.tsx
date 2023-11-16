@@ -4,7 +4,6 @@ import clsx from "clsx";
 import styles from "./cyberInfoFrame.module.scss";
 import React from "react";
 import { TitleBoxShape } from "../../atoms/TitleBoxShape/TitleBoxShape";
-import { CyberTitle } from "../../atoms/CyberTitle/CyberTitle";
 import { CyberButton } from "../../atoms/CyberButton/CyberButton";
 
 export interface CyberInfoFrameProps {

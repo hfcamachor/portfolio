@@ -17,6 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const CyberFrameEx: Story = {
   args: {
-    children: 'Example text'
+    children: 'Example text',
+    color: "blue"
   },
 };

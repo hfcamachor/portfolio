@@ -20,6 +20,8 @@ type Story = StoryObj<typeof meta>;
 
 export const ButtonLabel: Story = {
   args: {
-    label: "Submit"
+    label: "Submit",
+    labelColor: "black",
+    color: 'yellow'
   },
 };

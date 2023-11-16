@@ -13,7 +13,6 @@
 
   .cyberFrameMain {
     stroke: $cyber-valencia;
-    fill: $cyber-coffee-bean;
   }
 }
 
@@ -24,7 +23,16 @@
 
   .cyberFrameMain {
     stroke: $cyber-bright-turquoise;
-    fill: $cyber-bunker;
+  }
+}
+
+.cyberFrameyellow {
+  .cyberFrameBorders {
+    fill: $cyber-ripe-lemon;
+  }
+
+  .cyberFrameMain {
+    stroke: $cyber-ripe-lemon;
   }
 }
 

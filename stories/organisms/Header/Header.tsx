@@ -19,11 +19,10 @@ export function Header({navItems, className}: HeaderProps) {
       <div className={styles.headerButtons}>
         {navItems.map((item, index) => {
           return (
-            <HeaderButton key={index} label={item.label} onClick={item.onClick} active={item.active} labelColor="white"  />
+            <HeaderButton key={index} label={item.label} onClick={item.onClick} active={item.active} labelColor="white" color="yellow"  />
           )
         })}
       </div>
-      <Separator />
     </header>
   );
 }

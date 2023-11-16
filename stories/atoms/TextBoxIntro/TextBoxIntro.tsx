@@ -1,10 +1,10 @@
 "use client";
 
-import styles from "./cyberTitle.module.scss";
+import styles from "./textBoxIntro.module.scss";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 
-export interface CyberTitleProps {
+export interface TextBoxIntroProps {
   /**
    * Custom Class
    */
@@ -35,7 +35,7 @@ export interface CyberTitleProps {
   level: number;
 }
 
-export function CyberTitle({
+export function TextBoxIntro({
   className,
   title,
   titleTwo,
@@ -43,16 +43,16 @@ export function CyberTitle({
   right,
   color,
   level
-}: CyberTitleProps) {
+}: TextBoxIntroProps) {
   const HeadingTag = `h${level}`;
 
   return (
     <div
       className={clsx(
-        styles.CyberTitleContainer,
-        styles[`CyberTitle${color}`],
-        small ? styles.CyberTitleSmall : styles.CyberTitleBig,
-        right ? styles.CyberTitleRight : styles.CyberTitleLeft,
+        styles.TextBoxIntroContainer,
+        styles[`TextBoxIntro${color}`],
+        small ? styles.TextBoxIntroSmall : styles.TextBoxIntroBig,
+        right ? styles.TextBoxIntroRight : styles.CyberTitleLeft,
         className
       )}
     >
