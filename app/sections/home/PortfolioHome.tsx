@@ -8,7 +8,9 @@ export function PortfolioHome() {
   return (
     <section className={style.portfolioHome}>
       <div className={style.portfolioHomeSection}>
-        <div className={style.portfolioHomeIntro}>
+        <div
+          className={style.portfolioHomeIntro}
+        >
           <h1 className={style.portfolioHomeTitle}>
             Hi, i am{" "}
             <span className={style.portfolioHomeHighlight}>Hector</span>
@@ -28,11 +30,7 @@ export function PortfolioHome() {
         </div>
       </div>
       <div className={style.portfolioHomeSection}>
-        <CyberFrame>
-          <div>
-            Hello
-          </div>
-        </CyberFrame>
+        <CyberFrame image="/assets/home-image-one.png" color="yellow" />
       </div>
     </section>
   );
