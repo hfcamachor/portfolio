@@ -4,10 +4,13 @@ import style from "./portfolioAbout.module.scss";
 import { CyberInfoFrame } from "@/stories/molecules/CyberInfoFrame/CyberInfoFrame";
 import Image from "next/image";
 import clsx from "clsx";
+import { PhotoShape } from "@/stories/molecules/PhotoShape/PhotoShape";
+import { CyberButton } from "@/stories/atoms/CyberButton/CyberButton";
 
 export function PortfolioAbout() {
   return (
     <section className={style.portfolioAbout}>
+      <div className={style.portfolioAboutSectionLeftBack}></div>
       <div className={style.portfolioAboutSectionContainer}>
         <div
           className={clsx(
@@ -15,15 +18,9 @@ export function PortfolioAbout() {
             style.portfolioAboutSectionLeft
           )}
         >
-          <div className={style.portfolioAboutPhotoContainer}>
-            <div className={style.portfolioAboutPhoto}>
-              <Image
-                fill
-                src={"/photos/photo.jpg"}
-                alt={"Photo"}
-                objectFit="cover"
-              />
-            </div>
+          <div className={style.portfolioAboutPhoto}>
+            <h2 className={style.portfolioAboutPhotoText}>About me</h2>
+            <PhotoShape photoImage="/photos/photo-s.png" alt="Photo" />
           </div>
         </div>
         <div
@@ -32,13 +29,30 @@ export function PortfolioAbout() {
             style.portfolioAboutSectionRight
           )}
         >
-          <CyberInfoFrame
-            title="About me"
-            subtitle="Who is Hector"
-            buttonLabel="Let AI Describe Me!"
-            responseTitle="Ai response"
-            responseText="Front-end developer and web designer with a passion for building accessible, intuitive, and visually appealing web experiences. Hybrid profile brings a unique blend of technical proficiency and creative vision to every project. Proven ability to develop and maintain high-quality web applications using a variety of technologies, including React, Vue, Angular, TypeScript, Storybook, Cypress, Next js, Vite, and Google Cloud Platform. Expertise in user interface (UI/UX) design, wireframing and prototyping with Figma, motion design, and interactive animation."
-          />
+          <div className={style.responseSection}>
+            <div className={style.responseSectionAiBotContainer}>
+              <div className={style.responseSectionAiBot}>
+                <Image
+                  src={"/assets/aibot.jpeg"}
+                  fill
+                  alt="Ai bot"
+                />
+              </div>
+            </div>
+            <div className={style.responseSectionText}>
+              <p>
+                Front-end developer and web designer with a passion for building
+                accessible, intuitive, and visually appealing web experiences.
+                <br /><br />
+                <span className={style.responseSectionTextHighlight}>
+                  Click below to discover what AI has to share about my journey
+                </span>
+              </p>
+            </div>
+            <div className={style.responseSectionButton}>
+              <CyberButton label="Let AI Describe Me" />
+            </div>
+          </div>
         </div>
       </div>
     </section>

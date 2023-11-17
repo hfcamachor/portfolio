@@ -35,29 +35,9 @@ export function CyberButton({
       )}
       onClick={onClick}
     >
-      <div className={styles.CyberButtonSquareShape}>
-        <div className={styles.CyberButtonSquareShapeInner}></div>
+      <div className={styles.CyberButtonLabel}>
+        {label}
       </div>
-      <div
-        className={clsx(
-          styles.CyberButtonSquareShape,
-          styles.CyberButtonSquareShapeRight
-        )}
-      >
-        <div className={styles.CyberButtonSquareShapeInner}></div>
-      </div>
-      <div className={clsx(styles.CyberButtonTriangleShape)}>
-        <div className={styles.CyberButtonTriangleShapeInner}></div>
-      </div>
-      <div
-        className={clsx(
-          styles.CyberButtonTriangleShape,
-          styles.CyberButtonTriangleShapeRight
-        )}
-      >
-        <div className={styles.CyberButtonTriangleShapeInner}></div>
-      </div>
-      <div className={styles.CyberButtonContainer}>{label}</div>
     </button>
   );
 }

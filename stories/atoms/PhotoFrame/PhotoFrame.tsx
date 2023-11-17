@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import styles from "./photoFrame.module.scss";
 
 export interface PhotoFrameProps {
@@ -8,12 +9,12 @@ export interface PhotoFrameProps {
   /**
    * Color of the frame
    */
-  color?: "red" | "blue";
+  color?: "red" | "blue" | "yellow";
 }
 
 export function PhotoFrame({ className, color }: PhotoFrameProps) {
   return (
-    <div className={className}>
+    <div className={ clsx(className, styles.PhotoFrame)}>
       <svg
         className={styles[`PhotoFrame${color}`]}
         width="100%"
@@ -51,8 +52,8 @@ export function PhotoFrame({ className, color }: PhotoFrameProps) {
           fill="#DC4943"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M127.887 17.9999L5.7735 229.506L127.887 441.013L372.113 441.013L494.226 229.506L372.113 17.9999L127.887 17.9999ZM375 12.9999L125 12.9999L0 229.506L125 446.013H375L500 229.506L375 12.9999Z"
           fill="#DC4943"
         />

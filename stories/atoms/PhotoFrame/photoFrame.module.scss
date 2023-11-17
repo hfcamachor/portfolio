@@ -1,5 +1,16 @@
 @import "@styles/colors.scss";
 
+.PhotoFrame {
+  width: 100%;
+  position: relative;
+}
+
 .PhotoFrameblue path {
-  fill: $cyber-cornflower-blue;
+  fill: $cyber-bright-turquoise;
+  width: 100%;
+}
+
+.PhotoFrameyellow path {
+  fill: $cyber-ripe-lemon;
+  width: 100%;
 }

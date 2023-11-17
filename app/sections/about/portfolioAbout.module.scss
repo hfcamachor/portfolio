@@ -4,6 +4,9 @@
 .portfolioAbout {
   height: calc(100vh - 60px);
   position: relative;
+  background-color: $cyber-ripe-lemon;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .portfolioAboutSectionContainer {
@@ -14,29 +17,87 @@
 
 .portfolioAboutSection {
   display: flex;
-  width: 50%;
-}
-
-.portfolioAboutPhotoContainer {
-  max-width: 300px;
-  position: relative;
-  width: 100%;
-  border: solid 4px $cyber-valencia;
-  position: relative;
+  width: 55%;
+  align-items: center;
+  height: 100%;
 }
 
 .portfolioAboutSectionLeft {
-  justify-content: flex-end;
+  position: relative;
+  width: 45%;
+  justify-content: center;
+}
+
+.portfolioAboutSectionLeftBack {
+  background-color: $cyber-log-cabin;
   height: 100%;
   width: 45%;
-  max-height: 557px;
-  padding-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 100%;
+    height: 100%;
+    background-color: $cyber-log-cabin;
+    transform: skewX(10deg);
+    transform-origin: top;
+  }
 }
 
 .portfolioAboutPhoto {
-  max-width: 500px;
   position: relative;
-  width: 96%;
-  height: 97.5%;
-  margin: 2%;
+  width: 100%;
+  max-width: 400px;
+  padding: 35px;
+}
+
+.portfolioAboutPhotoText {
+  font-family: var(--font-orbitron-bold);
+  color: $cyber-ripe-lemon;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 18%;
+  left: -12%;
+  margin: 0;
+  transform: rotate(-60deg);
+}
+
+.responseSectionText {
+  line-height: 26px;
+}
+
+.responseSectionTextHighlight {
+  font-weight: bold;
+}
+
+.responseSection {
+  width: 100%;
+  max-width: 500px;
+  margin-left: 25%;
+}
+
+.responseSectionAiBotContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.responseSectionAiBot {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid 1px black;
+  position: relative;
+  overflow: hidden;
+}
+
+.responseSectionButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
 }

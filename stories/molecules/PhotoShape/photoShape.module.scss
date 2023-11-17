@@ -3,7 +3,8 @@
 .photoShape {
   position: relative;
   display: inline-block;
-  max-width: 400px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .photoShapeImage {
@@ -14,6 +15,11 @@
 
 .photoShapeImageContainer {
   padding: 7% 4% 6% 5%;
+  position: absolute;
+  top: 7%;
+  left: 4.5%;
+  width: 82%;
+  height: 72%;
 }
 
 .shape {
