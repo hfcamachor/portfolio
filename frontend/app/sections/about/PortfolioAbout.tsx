@@ -32,10 +32,10 @@ export function PortfolioAbout() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: `Write me description, write it as an interesting Ai is talking about me and describing me as a good front end in no more than ${generateRandomNumber(
+        message: `Write me description, do it as an interesting Ai is talking about me and describing me as a good front end in no more than ${generateRandomNumber(
           rangeSize,
           minValue
-        )} words, use this description to create it: "my name is HectorFront-end developer and web designer with a passion for building accessible, intuitive, and visually appealing web experiences. Hybrid profile brings a unique blend of technical proficiency and creative vision to every project. Proven ability to develop and maintain high-quality web applications using a variety of technologies, including React, Vue, Angular, TypeScript, Storybook, Cypress, Next js, Vite, and Google Cloud Platform. Expertise in user interface (UI/UX) design, wireframing and prototyping with Figma, motion design, and interactive animation". keep almos the same lenght`,
+        )} words, start with something like, "Meet Hector", "Hector is", "let me introduce" or something like that,  use this description to create it: "my name is HectorFront-end developer and web designer with a passion for building accessible, intuitive, and visually appealing web experiences. Hybrid profile brings a unique blend of technical proficiency and creative vision to every project. Proven ability to develop and maintain high-quality web applications using a variety of technologies, including React, Vue, Angular, TypeScript, Storybook, Cypress, Next js, Vite, and Google Cloud Platform. Expertise in user interface (UI/UX) design, wireframing and prototyping with Figma, motion design, and interactive animation". keep almos the same lenght`,
       }),
     };
 
@@ -72,36 +72,45 @@ export function PortfolioAbout() {
           )}
         >
           <div className={style.responseSection}>
-            <div className={style.responseSectionText}>
-              <div className={style.responseSectionLoader}>
-                {loading && <Loader />}
-              </div>
-              {!aiDescription && !loading && (
-                <p>
-                  Front-end developer and web designer with a passion for
-                  building accessible, intuitive, and visually appealing web
-                  experiences.
-                  <br />
-                  <br />
-                  <span className={style.responseSectionTextHighlight}>
-                    Click below to discover what AI has to share about my
-                    journey
-                  </span>
-                </p>
-              )}
-              <p>{!loading && aiDescription}</p>
+            <div className={style.responseSectionLoader}>
+              {loading && <Loader />}
             </div>
-            <div className={style.responseSectionButton}>
-              <div className={style.responseSectionButtonBot}>
+            <div className={style.responseSectionText}>
+              <div className={style.responseSectionAiBotContainer}>
                 {aiDescription && !loading && (
-                  <div className={style.responseSectionAiBotContainer}>
-                    <div className={style.responseSectionAiBot}>
-                      <div className={style.responseSectionAiBotImage}>
-                        <Image src={`/aibots/aibot-${generateRandomNumber(10, 1)}.jpeg`} fill alt="Ai bot" />
-                      </div>
+                  <div className={style.responseSectionAiBot}>
+                    <div className={style.responseSectionAiBotImage}>
+                      <Image
+                        src={`/aibots/aibot-${generateRandomNumber(
+                          10,
+                          1
+                        )}.jpeg`}
+                        fill
+                        alt="Ai bot"
+                      />
                     </div>
                   </div>
                 )}
+              </div>
+              <div>
+                {!aiDescription && !loading && (
+                  <p>
+                    Front-end developer and web designer with a passion for
+                    building accessible, intuitive, and visually appealing web
+                    experiences.
+                    <br />
+                    <br />
+                    <span className={style.responseSectionTextHighlight}>
+                      Click below to discover what AI has to share about my
+                      journey
+                    </span>
+                  </p>
+                )}
+                <p>{!loading && aiDescription}</p>
+              </div>
+            </div>
+            <div className={style.responseSectionButton}>
+              <div className={style.responseSectionButtonBot}>
                 <CyberButton
                   onClick={getAiDescription}
                   label="Let AI Describe Me"
