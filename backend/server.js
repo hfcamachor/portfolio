@@ -22,7 +22,6 @@ app.post("/completions", async (req, res) => {
           content: req.body.message,
         },
       ],
-      max_tokens: 100,
     }),
   };
 
