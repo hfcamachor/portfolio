@@ -22,10 +22,10 @@ export function PortfolioAbout() {
 
   const getAiDescription = async () => {
     setLoading(true);
-    const rangeSize = 120 - 70 + 1;
-    const minValue = 50;
+    const rangeSize = 120 - 40 + 1;
+    const minValue = 40;
     const numberOfWords = generateRandomNumber(rangeSize, minValue);
-
+    console.log(numberOfWords);
     const apiUrl = "http://localhost:8000/completions";
     const options = {
       method: "POST",
@@ -33,7 +33,32 @@ export function PortfolioAbout() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: `Write me description, do it as an interesting Ai is talking about me and describing me as a good front end in no more than ${numberOfWords} words, start with something like, "Meet Hector", "Hector is", "let me introduce" or something like that,  use this description to create it: "my name is HectorFront-end developer and web designer with a passion for building accessible, intuitive, and visually appealing web experiences. Hybrid profile brings a unique blend of technical proficiency and creative vision to every project. Proven ability to develop and maintain high-quality web applications using a variety of technologies, including React, Vue, Angular, TypeScript, Storybook, Cypress, Next js, Vite, and Google Cloud Platform. Expertise in user interface (UI/UX) design, wireframing and prototyping with Figma, motion design, and interactive animation". keep almos the same lenght`,
+        message: `Write my description, choose a random character of videgames o films as the person who made the description about me and describing me as a good front end in no more than ${numberOfWords} words, start with something like, "Meet Hector", "Hector is", "let me introduce" or something like that, use this to create it: "
+
+        Technical Skills
+        ● Programming Languages: HTML, CSS, JavaScript, TypeScript, ES6
+        ● Front-end Frameworks: React, Vue.js, Angular, Next.js
+        ● State Management: Redux
+        ● Testing: Cypress, Unit Testing (Jasmine, Jest)
+        ● Build Tools: Webpack
+        ● Back-end Technologies: Node.js, Express.js
+        ● UI Libraries: Material UI
+        ● Prototyping: Figma, Illustrator
+        ● Animation: CSS, LottieFiles,
+        ● Other: Web Performance Optimization, Accessibility, Version Control (Git), Python,
+        Google Cloud Platform
+        Design Skills
+        ● UI/UX Design: User interface and user experience design
+        ● Prototyping: Wireframing and prototyping with Figma
+        ● Motion Design: Interactive animation
+        Soft Skills
+        ● Problem Solving
+        ● Attention to Detail
+        ● Flexibility and Adaptability
+        ● Fast and Continuous Learning
+        ● Self-Motivated
+        
+        ". keep almos the same lenght`,
       }),
     };
 
