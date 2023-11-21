@@ -33,32 +33,34 @@ export function PortfolioAbout() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: `Write my description, choose a random character of videgames o films as the person who made the description about me and describing me as a good front end in no more than ${numberOfWords} words, start with something like, "Meet Hector", "Hector is", "let me introduce" or something like that, use this to create it: "
+        message: `First choose a famous character of films, videogames, or series.
 
-        Technical Skills
-        ● Programming Languages: HTML, CSS, JavaScript, TypeScript, ES6
-        ● Front-end Frameworks: React, Vue.js, Angular, Next.js
-        ● State Management: Redux
-        ● Testing: Cypress, Unit Testing (Jasmine, Jest)
-        ● Build Tools: Webpack
-        ● Back-end Technologies: Node.js, Express.js
-        ● UI Libraries: Material UI
-        ● Prototyping: Figma, Illustrator
-        ● Animation: CSS, LottieFiles,
-        ● Other: Web Performance Optimization, Accessibility, Version Control (Git), Python,
-        Google Cloud Platform
-        Design Skills
-        ● UI/UX Design: User interface and user experience design
-        ● Prototyping: Wireframing and prototyping with Figma
-        ● Motion Design: Interactive animation
-        Soft Skills
-        ● Problem Solving
-        ● Attention to Detail
-        ● Flexibility and Adaptability
-        ● Fast and Continuous Learning
-        ● Self-Motivated
+        Later on talking like that character make a description about me Hector, saying that i am a good front end in no more than ${numberOfWords} words, start with something like, "Meet Hector", "Hector is", "let me introduce" or something like that, use this to create it: "
         
-        ". keep almos the same lenght`,
+                Technical Skills
+                ● Programming Languages: HTML, CSS, JavaScript, TypeScript, ES6
+                ● Front-end Frameworks: React, Vue.js, Angular, Next.js
+                ● State Management: Redux
+                ● Testing: Cypress, Unit Testing (Jasmine, Jest)
+                ● Build Tools: Webpack
+                ● Back-end Technologies: Node.js, Express.js
+                ● UI Libraries: Material UI
+                ● Prototyping: Figma, Illustrator
+                ● Animation: CSS, LottieFiles,
+                ● Other: Web Performance Optimization, Accessibility, Version Control (Git), Python,
+                Google Cloud Platform
+                Design Skills
+                ● UI/UX Design: User interface and user experience design
+                ● Prototyping: Wireframing and prototyping with Figma
+                ● Motion Design: Interactive animation
+                Soft Skills
+                ● Problem Solving
+                ● Attention to Detail
+                ● Flexibility and Adaptability
+                ● Fast and Continuous Learning
+                ● Self-Motivated
+                
+                ". keep almos the same length`,
       }),
     };
 
