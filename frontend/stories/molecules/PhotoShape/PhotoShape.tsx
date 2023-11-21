@@ -16,7 +16,7 @@ export interface HeaderButtonProps {
 export function PhotoShape({ photoImage, alt }: HeaderButtonProps) {
   return (
     <div className={styles.photoShape}>
-      <PhotoFrame color="blue" />
+      <PhotoFrame color="yellow" />
       <div className={styles.photoShapeImageContainer}>
         <Image
           className={styles.photoShapeImage}
