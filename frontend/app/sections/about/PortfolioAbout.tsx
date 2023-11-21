@@ -24,6 +24,7 @@ export function PortfolioAbout() {
     setLoading(true);
     const rangeSize = 120 - 70 + 1;
     const minValue = 50;
+    const numberOfWords = generateRandomNumber(rangeSize, minValue);
 
     const apiUrl = "http://localhost:8000/completions";
     const options = {
@@ -32,10 +33,7 @@ export function PortfolioAbout() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: `Write me description, do it as an interesting Ai is talking about me and describing me as a good front end in no more than ${generateRandomNumber(
-          rangeSize,
-          minValue
-        )} words, start with something like, "Meet Hector", "Hector is", "let me introduce" or something like that,  use this description to create it: "my name is HectorFront-end developer and web designer with a passion for building accessible, intuitive, and visually appealing web experiences. Hybrid profile brings a unique blend of technical proficiency and creative vision to every project. Proven ability to develop and maintain high-quality web applications using a variety of technologies, including React, Vue, Angular, TypeScript, Storybook, Cypress, Next js, Vite, and Google Cloud Platform. Expertise in user interface (UI/UX) design, wireframing and prototyping with Figma, motion design, and interactive animation". keep almos the same lenght`,
+        message: `Write me description, do it as an interesting Ai is talking about me and describing me as a good front end in no more than ${numberOfWords} words, start with something like, "Meet Hector", "Hector is", "let me introduce" or something like that,  use this description to create it: "my name is HectorFront-end developer and web designer with a passion for building accessible, intuitive, and visually appealing web experiences. Hybrid profile brings a unique blend of technical proficiency and creative vision to every project. Proven ability to develop and maintain high-quality web applications using a variety of technologies, including React, Vue, Angular, TypeScript, Storybook, Cypress, Next js, Vite, and Google Cloud Platform. Expertise in user interface (UI/UX) design, wireframing and prototyping with Figma, motion design, and interactive animation". keep almos the same lenght`,
       }),
     };
 

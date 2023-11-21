@@ -11,11 +11,11 @@ app.post("/completions", async (req, res) => {
   const options = {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.AI_API_KEY}`,
+      Authorization: `Bearer ${process.env.AI_API_KEY_DEFAULT}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-1106",
       messages: [
         {
           role: "user",
@@ -41,7 +41,7 @@ app.post("/generations", async (req, res) => {
   const options = {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.AI_API_KEY}`,
+      Authorization: `Bearer ${process.env.AI_API_KEY_DEFAULT}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
