@@ -1,6 +1,7 @@
 import "./globals.scss";
 import { Inter, Roboto, Orbitron } from "next/font/google";
 import { HeaderApp } from "./components/HeaderApp/HeaderApp";
+import 'intersection-observer';
 
 const roboto = Roboto({
   weight: ["400", "700"],

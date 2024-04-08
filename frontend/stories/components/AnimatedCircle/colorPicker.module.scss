@@ -1,0 +1,39 @@
+@import "@styles/colors.scss";
+
+.colorPicker {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $gray-back;
+  padding: 5px;
+  border-radius: 10px;
+
+  &Buttons {
+    margin: 2px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    border: solid rgb(178, 178, 178) 1px;
+    transition: all .5s;
+
+    &:hover {
+      width: 37px;
+      height: 37px;
+    }
+  }
+
+  &Yellow {
+    background-color: $dull-yellow;
+  }
+
+  &Green {
+    background-color: $valentine-red;
+  }
+
+  &Red {
+    background-color: $caribbean-green;
+  }
+}
