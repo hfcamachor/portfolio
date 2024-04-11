@@ -2,7 +2,6 @@
 
 import style from "./portfolioHome.module.scss";
 import { CyberFrame } from "@/stories/atoms/CyberFrame/CyberFrame";
-import { motion } from "framer-motion";
 
 export function PortfolioHome() {
   return (

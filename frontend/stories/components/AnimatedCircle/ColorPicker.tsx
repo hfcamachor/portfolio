@@ -9,13 +9,14 @@ export interface ColorPickerProps {
    * Callback function invoked when a color is selected.
    */
   onSelect: (color: string) => void;
+  customClassName: string;
 }
 
-export function ColorPicker({ onSelect }: ColorPickerProps) {
+export function ColorPicker({ onSelect, customClassName }: ColorPickerProps) {
   const colorClasses = ["Yellow", "Green", "Red", "White"];
 
   return (
-    <div className={styles.colorPicker}>
+    <div className={clsx(styles.colorPicker, customClassName)}>
       {colorClasses.map((color, index) => (
         <button
           key={index}

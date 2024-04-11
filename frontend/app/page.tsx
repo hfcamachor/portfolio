@@ -7,17 +7,23 @@ import "./page.module.scss";
 import { ColorPicker } from "@/stories/components/AnimatedCircle/ColorPicker";
 import clsx from "clsx";
 import { useState } from "react";
+import { useGlobalState } from "./utils/globalContext";
 
 export default function Home() {
-  const [color, setColor] = useState("");
-  const onSelect = (color: string) => {
-    setColor(color);
-  };
+  const { globalState, setGlobalState } = useGlobalState();
 
+  const onSelect = (color: string) => {
+    const globalStateObj = {
+      ...globalState,
+      themeColor: color
+    }
+    setGlobalState(globalStateObj);
+  };
+console.log("globalState", globalState)
   return (
     <main>
-      <div className={clsx(styles.main, styles[`homePage${color}`])}>
-        <ColorPicker onSelect={onSelect} />
+      <div className={clsx(styles.main, styles[`homePage${globalState.themeColor}`])}>
+        <ColorPicker onSelect={onSelect} customClassName={styles.colorPicker}/>
         <PortfolioHome />
         <PortfolioAbout />
       </div>

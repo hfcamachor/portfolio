@@ -4,4 +4,19 @@
   &Yellow {
     background-color: $dull-yellow;
   }
+  &Green {
+    background-color: $caribbean-green;
+  }
+  &Red {
+    background-color: $valentine-red;
+  }
+  &White {
+    background-color: white;
+  }
+}
+
+.colorPicker {
+  position: fixed;
+  right: 0;
+  top: 70px;
 }

@@ -1,7 +1,8 @@
 import "./globals.scss";
 import { Inter, Roboto, Orbitron } from "next/font/google";
 import { HeaderApp } from "./components/HeaderApp/HeaderApp";
-import 'intersection-observer';
+import "intersection-observer";
+import { GlobalStateProvider } from "./utils/globalContext";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -35,10 +36,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${roboto.variable} ${orbitron.variable} ${inter.variable} ${orbitronBold.variable}`}>
+    <html
+      lang="en"
+      className={`${roboto.variable} ${orbitron.variable} ${inter.variable} ${orbitronBold.variable}`}
+    >
       <body>
         <HeaderApp />
-        {children}
+        <GlobalStateProvider>{children}</GlobalStateProvider>
       </body>
     </html>
   );
